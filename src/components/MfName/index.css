@@ -1,0 +1,10 @@
+.mf-link {
+  text-decoration: none;
+  color: rgb(250, 241, 241);
+}
+.mf-item {
+  background-color: #333;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  padding: 8px 20px;
+}
