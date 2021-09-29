@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import './MfGraph.css'
 
 import Plotly from 'plotly.js'
 
@@ -10,21 +11,42 @@ class MfGraph extends Component {
   render() {
     const {xValues, yValues, schemeName} = this.props
     return (
-      <Plot
-        data={[
-          {
-            x: xValues,
-            y: yValues,
-            type: 'scatter',
-            marker: {color: 'red'},
-          },
-        ]}
-        layout={{
-          width: 1200,
-          height: 350,
-          title: `${schemeName} Net Asset Value Plot`,
-        }}
-      />
+      <>
+        <div className="sm-graph">
+          <Plot
+            data={[
+              {
+                x: xValues,
+                y: yValues,
+                type: 'scatter',
+                marker: {color: 'red'},
+              },
+            ]}
+            layout={{
+              width: 330,
+              height: 350,
+              title: `Net Asset Value Plot`,
+            }}
+          />
+        </div>
+        <div className="lg-graph">
+          <Plot
+            data={[
+              {
+                x: xValues,
+                y: yValues,
+                type: 'scatter',
+                marker: {color: 'red'},
+              },
+            ]}
+            layout={{
+              width: 1400,
+              height: 350,
+              title: `${schemeName} Net Asset Value Plot`,
+            }}
+          />
+        </div>
+      </>
     )
   }
 }

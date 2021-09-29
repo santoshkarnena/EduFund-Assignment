@@ -1,0 +1,16 @@
+.sm-graph {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .sm-graph {
+    display: none;
+  }
+}
+.lg-graph {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .lg-graph {
+    display: block;
+  }
+}
